@@ -15,31 +15,50 @@ package edu.ualr.objectorientedprogramming.model;
 
 // TODO 05. Encapsulation. what does it mean?
 // TODO 05.01 Levels of access control provided by Java: public, protected, private, package-private
-// TODO 05.02. We do we typically do by convention?
+// TODO 05.02. What do we typically do by convention?
 
 
 public class Vehicle {
 
     // State -> Attributes
 
-    float speed = 0;
-    String brand;
-    int purchaseYear;
+    private float speed = 0;
+    private String brand;
+    private  int purchaseYear;
 
     // Behaviour -> Methods
 
-    void speedUp() {
-        speed ++;
-    }
-
-    Vehicle() {
-
-    }
-
-    Vehicle(String brand, int purchaseYear) {
+    public Vehicle(String brand, int purchaseYear) {
         this.brand = brand;
         this.purchaseYear = purchaseYear;
     }
 
+    public float getSpeed() {
+        return speed;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getPurchaseYear() {
+        return purchaseYear;
+    }
+
+    public void setPurchaseYear(int purchaseYear) {
+        this.purchaseYear = purchaseYear;
+    }
+
+    public void speedUp(float delta) {
+        speed += delta;
+    }
+
+    public String getDescription(){
+        return "Vehicle: brand - " + this.brand + ", purchase year: - " + this.purchaseYear;
+    }
 
 }

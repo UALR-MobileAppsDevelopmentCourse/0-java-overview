@@ -3,26 +3,17 @@ package edu.ualr.objectorientedprogramming;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
+import edu.ualr.objectorientedprogramming.model.Car;
+import edu.ualr.objectorientedprogramming.model.Circle;
+import edu.ualr.objectorientedprogramming.model.Shape;
+import edu.ualr.objectorientedprogramming.model.Square;
 import edu.ualr.objectorientedprogramming.model.Vehicle;
 
 
 // TODO 01. Object vs Classes. Typical elements or components that we can find in a class?
 
-// TODO 06. Inheritance. What is inheritance? Examples?
-    // TODO 06.01. Why is inheritance useful? Code reuse
-    // TODO 06.02. Single inheritance vs Multiple inheritance. Are they both supported by Java? Diamond problem
-    // TODO 06.02. How do we define inheritance in Java?
-    // TODO 06.03. Reserved word "super". What does it mean?
-    // TODO 06.03. Overriding methods
-// TODO 07. Polymorphism. What is that? Examples? Ability to change form
-    // TODO 07.01. Upcasting: child -> parent
-    // TODO 07.02. Downcasting: parent -> child
-    // TODO 07.03. Careful with downcasting. Let's make sure it's a valid operation
-    // TODO 07.04. Abstract classes.
-        // TODO 07.04.01. What are they?
-        // TODO 07.04.02. Instantiation
-        // TODO 07.04.03. Abstract methods
 // TODO 08. Interfaces. When do we create an interface?
     // TODO 08.01. Why do we need interfaces?
     // TODO 08.02. How do we define an interface in code?
@@ -45,11 +36,64 @@ import edu.ualr.objectorientedprogramming.model.Vehicle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Vehicle v = new Vehicle("Porsche", 2019);
+        Vehicle v = new Vehicle("Yamaha", 2019);
+        String brand  =  v.getBrand();
+        Log.d(TAG, "Vehicle brand: " + brand);
+        v.speedUp(25.5f);
+        Log.d(TAG, "Current vehicle's speed is: " + v.getSpeed());
+        Log.d(TAG, v.getDescription());
+        Car c = new Car("Tesla", 2017, "Model S");
+        Log.d(TAG, c.getDescription());
+
+        // TODO 07. Polymorphism. What is that? Examples? Ability to change form
+
+
+        // TODO 07.03. Careful with downcasting. Let's make sure it's a valid operation
+        // TODO 07.04. Abstract classes.
+        // TODO 07.04.01. What are they?
+        // TODO 07.04.02. Instantiation
+        // TODO 07.04.03. Abstract methods
+
+        Shape shape = new Shape(12, 24);
+        shape.draw();
+        Circle circle = new Circle(32, 64, 54);
+        circle.draw();
+
+        // TODO 07.01. Upcasting: child -> parent
+        Shape shape02 = new Circle(23, 45, 67);
+        shape02.draw();
+
+        Log.d("Shape", "Array of shapes: ");
+
+        Shape[] shapes = new Shape[] {
+                new Shape(12, 34),
+                new Circle( 23, 45, 67),
+                new Shape(98, 87),
+                new Circle( 65, 54, 32)
+        };
+
+        for (Shape currentShape : shapes) {
+            currentShape.draw();
+        }
+
+        // TODO 07.02. Downcasting: parent -> child
+
+        Circle circle02 = (Circle) shape02;
+        Log.d("Shape", "Radius: " + circle02.getRadius());
+
+        Square square = new Square(12, 45, 34);
+        Shape shape03 = square;
+
+        if (shape03 instanceof  Circle) {
+            Circle circle03 = (Circle) shape03;
+            circle03.draw();
+        }
     }
 }
