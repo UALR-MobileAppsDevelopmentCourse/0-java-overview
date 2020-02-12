@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import edu.ualr.objectorientedprogramming.model.Vehicle;
+
 
 // TODO 01. Object vs Classes. Typical elements or components that we can find in a class?
 
-// TODO 05. Encapsulation. what does it mean?
-    // TODO 05.01 Levels of access control provided by Java: public, protected, private, package-private
-    // TODO 05.02. We do we typically do by convention?
 // TODO 06. Inheritance. What is inheritance? Examples?
     // TODO 06.01. Why is inheritance useful? Code reuse
     // TODO 06.02. Single inheritance vs Multiple inheritance. Are they both supported by Java? Diamond problem

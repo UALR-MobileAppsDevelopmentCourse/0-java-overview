@@ -1,4 +1,4 @@
-package edu.ualr.objectorientedprogramming;
+package edu.ualr.objectorientedprogramming.model;
 
 
 // TODO 02. How do we define a class?
@@ -13,7 +13,12 @@ package edu.ualr.objectorientedprogramming;
 // TODO 04.02.01. Using a single class
 // TODO 04.02.02. Using the whole package
 
-class Vehicle {
+// TODO 05. Encapsulation. what does it mean?
+// TODO 05.01 Levels of access control provided by Java: public, protected, private, package-private
+// TODO 05.02. We do we typically do by convention?
+
+
+public class Vehicle {
 
     // State -> Attributes
 
