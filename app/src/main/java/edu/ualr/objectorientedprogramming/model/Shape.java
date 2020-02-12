@@ -2,7 +2,7 @@ package edu.ualr.objectorientedprogramming.model;
 
 import android.util.Log;
 
-public class Shape {
+public abstract class Shape {
 
     private int x,y;
 
@@ -25,10 +25,6 @@ public class Shape {
     public Shape(int x, int y) {
         this.x = x;
         this.y = y;
-    }
-
-    public void draw() {
-        Log.d("Shape", "Shape drawn at (" + x + ", " + y + ")");
     }
 
 }

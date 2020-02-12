@@ -1,6 +1,6 @@
 package edu.ualr.objectorientedprogramming.model;
 
-public class Square extends Shape {
+public class Square extends Shape implements Drawable{
 
     private int side = 0;
 
@@ -9,4 +9,8 @@ public class Square extends Shape {
         this.side =  side;
     }
 
+    @Override
+    public void draw(int color) {
+
+    }
 }
