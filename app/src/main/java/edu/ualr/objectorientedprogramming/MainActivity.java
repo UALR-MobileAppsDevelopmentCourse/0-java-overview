@@ -5,16 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 
-// TODO 01. Object vs Classes. Typical elements or components that que can find in a class?
-// TODO 02. How do we define a class?
-    // TODO 02.01. Naming convention for the class and the file
-    // TODO 02.03. Several classes in the same file
-// TODO 03. Elements / components of an object: State + Behaviour
-// TODO 04. Packages
-    // TODO 04.01. Access classes in the same package
-    // TODO 04.02. Access classes in a different package
-        // TODO 04.02.01. Using a single class
-        // TODO 04.02.02. Using the whole package
+// TODO 01. Object vs Classes. Typical elements or components that we can find in a class?
+
 // TODO 05. Encapsulation. what does it mean?
     // TODO 05.01 Levels of access control provided by Java: public, protected, private, package-private
     // TODO 05.02. We do we typically do by convention?
@@ -58,5 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Vehicle v = new Vehicle("Porsche", 2019);
     }
 }
