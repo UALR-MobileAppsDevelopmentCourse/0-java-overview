@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import edu.ualr.objectorientedprogramming.model.Car;
 import edu.ualr.objectorientedprogramming.model.Circle;
@@ -18,6 +22,10 @@ import edu.ualr.objectorientedprogramming.model.WeekDay;
 
 
 // TODO 01. Object vs Classes. Typical elements or components that we can find in a class?
+
+enum Color {
+    RED, BLACK, WHITE, BLUE, GREEN;
+}
 
 
 public class MainActivity extends AppCompatActivity {
@@ -136,5 +144,54 @@ public class MainActivity extends AppCompatActivity {
 
         Coin coin = Coin.NICKEL;
         Log.d("Enums", coin.getLabel() + " has a value of " + coin.value());
+
+        // TODO 11. String class
+        // TODO 11.01. Initialization
+        String favouriteLanguage = "Java";                              // = new String("Java");
+        // TODO 11.02. length. Not terminated by null character
+        int numChars = favouriteLanguage.length();
+        // TODO 11.03. Get character at an specific position
+        char specificChar = favouriteLanguage.charAt(2);
+        // TODO 11.04. Look for a substring in a string
+        int pos = favouriteLanguage.indexOf("v");
+        // TODO 11.05. Concat two strings
+        favouriteLanguage = favouriteLanguage.concat(" is awesome");
+        // TODO 11.06. Replace a char in a string with a different one
+        favouriteLanguage = favouriteLanguage.replace('a', 'o');
+        // TODO 12. Collections. Why?
+        // TODO 13. List interface and ArrayList class. Advantages?
+        // TODO 13.01. Initialize an empty list
+        List<String> countriesCopy = new ArrayList<>();
+        // TODO 13.02. Add an element to a list
+        countriesCopy.add("Canada");
+        // TODO 13.03. Add several elements to a list
+        countriesCopy.addAll(europe);
+        // TODO 13.04. Get an element in the list providing its position
+        countriesCopy.get(2);
+        // TODO 13.05. Delete an element from the list
+        countriesCopy.remove(2);
+        // TODO 13.06. Get the position of an element in a list
+        pos = countriesCopy.indexOf("Portugal");
+        // TODO 14. Map interface and HashMap class
+        // TODO 14.01 Initialize an empty map
+        Map<String, Color> map = new HashMap();
+        // TODO 14.02. Add new elements to the map
+        map.put("red", Color.RED);
+        map.put("green", Color.GREEN);
+        map.put("blue", Color.BLUE);
+        // TODO 14.03. Check if a key value is already in the map
+        boolean keyInMap = map.containsKey("green");
+        // TODO 14.04. Check if a value is already in the map
+        boolean valueInMap = map.containsValue(Color.WHITE);
+        // TODO 14.05. Get the corresponding value for a key value
+        Color colorValue = (Color) map.get("blue");
+        // TODO 14.06. Remove an specific entry in the map
+        map.remove("green");
+        // TODO 14.07. Get a collection with just the key values in the map
+        Set<String> keyValues = map.keySet();
+        // TODO 14.08. Get a collection with just the actual values in the map
+        Collection<Color> actualValues = map.values();
+        // TODO 14.07. Remove all the elements in a map
+        map.clear();
     }
 }
