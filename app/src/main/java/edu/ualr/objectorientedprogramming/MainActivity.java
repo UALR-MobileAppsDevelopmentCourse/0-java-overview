@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import java.util.Map;
+
 
 // TODO 01. Object vs Classes. Typical elements or components that que can find in a class?
 // TODO 02. How do we define a class?
@@ -50,6 +52,32 @@ import android.os.Bundle;
     // TODO 10.03. If enums are classes... can we call enum's constructor to create more constants?
     // TODO 10.04. Which are the values assigned by default ?
     // TODO 10.05. How can we create an enum with a specific set of constant values ? PENNY (1), NICKEL (5), DIME (10), QUARTER (25)
+// TODO 11. String class
+    // TODO 11.01. Initialization
+    // TODO 11.02. length. Not terminated by null character
+    // TODO 11.03. Get character at an specific position
+    // TODO 11.04. Look for a substring in a string
+    // TODO 11.05. Concat two strings
+    // TODO 11.06. Replace a char in a string with a different one
+// TODO 12. Collections. Why?
+// TODO 13. List interface and ArrayList class. Advantages?
+    // TODO 13.01. Initialize an empty list
+    // TODO 13.02. Add an element to a list
+    // TODO 13.03. Add several elements to a list
+    // TODO 13.04. Get an element in the list providing its position
+    // TODO 13.05. Delete an element from the list
+    // TODO 13.06. Save an element at a given position in the list
+    // TODO 13.06. Get the position of an element in a list
+// TODO 14. Map interface and HashMap class
+    // TODO 14.01 Initialize an empty map
+    // TODO 14.02. Add new elements to the map
+    // TODO 14.03. Check if a key value is already in the map
+    // TODO 14.04. Check if a value is already in the map
+    // TODO 14.05. Get the corresponding value for a key value
+    // TODO 14.06. Remove an specific entry in the map
+    // TODO 14.07. Remove all the elements in a map
+    // TODO 14.08. Get a collection with just the key values in the map
+    // TODO 14.09. Get a collection with just the actual values in the map
 
 
 public class MainActivity extends AppCompatActivity {
